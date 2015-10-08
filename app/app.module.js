@@ -16,9 +16,6 @@ angular
 
     .config(function($stateProvider, $urlRouterProvider) {
 
-        //$authProvider.configure({
-        //    apiUrl: 'http://localhost:3000/api/v1'
-        //});
         $stateProvider
             .state('app', {
                 url: '/app',
