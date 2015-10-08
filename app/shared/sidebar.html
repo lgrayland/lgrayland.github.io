@@ -1,0 +1,46 @@
+
+   <!--  <h4>Search</h4>
+    <div class="hline"></div>
+        <p>
+            <br/>
+            <input type="text" class="form-control" placeholder="Search something">
+        </p>
+        <div class="spacing"></div> -->
+        <!--<h4>Subscribe</h4>-->
+        <!--<div class="hline"></div>-->
+        <!--<p>-->
+            <!--<p class="rss-subscribe">Subscribe to this blog <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>.</p>-->
+        <!--</p>-->
+
+        <!--<div class="spacing"></div>-->
+
+        <h4>Categories</h4>
+        <div class="hline"></div>
+
+            <p ng-repeat="post in posts">
+                <a href=""><i class="fa fa-angle-right"></i>{{post.category}}</a>
+                <span class="badge badge-theme pull-right"></span>
+            </p>
+
+
+        <div class="spacing"></div>
+
+        <h4>Recent Posts</h4>
+        <div class="hline"></div>
+        <ul class="popular-posts">
+
+            <li ng-repeat="post in posts">
+                <a ui-sref="web.post({id:post.id})"><img ng-src="assets/img/blog/thumbs/{{post.image}}" alt="Popular Post"></a>
+                <p><a ui-sref="web.post({id:post.id})">{{ post.title }}</a></p>
+                <em>Posted on {{ post.created_at | date:'MMM d, yyyy' }}</em>
+            </li>
+
+        </ul>
+
+        <div class="spacing clearfix"></div>
+
+        <h4>Popular Tags</h4>
+        <div class="hline"></div>
+        <p>
+            <a ng-repeat="tag in tags" class="btn btn-theme" href="" role="button">{{tag}}</a>
+        </p>

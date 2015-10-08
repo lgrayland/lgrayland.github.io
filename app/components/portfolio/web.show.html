@@ -1,0 +1,44 @@
+<ion-content>
+    <div class="blue">
+        <div class="container">
+            <div class="row">
+                <h3>{{project.title | uppercase}}</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt">
+
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 centered">
+                <carousel interval="myInterval" no-wrap="noWrapSlides">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="assets/img/project/carousel/{{slide}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1">
+                <div class="spacing"></div>
+                {{ project.details}}
+            </div>
+            <div class="col-lg-4 col-lg-offset-1">
+                <div class="spacing"></div>
+                <h4>Project Details</h4>
+                <div class="hline"></div>
+                <p><b>Date:</b> {{ project.date | date:'MMM d, yyyy' }}</p>
+                <!-- <p><b>Author:</b> {{ page.author }}</p> -->
+                <p><b>Technologies:</b> {{project.technologies}}</p>
+                <!-- <p><b>Client:</b> {{ page.client }}</p> -->
+                <p><b>Website:</b> <a ng-href="{{ project.website }}">{{ project.website }}</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footerwrap" ng-include="'app/shared/footer.html'"></footer>
+
+</ion-content>

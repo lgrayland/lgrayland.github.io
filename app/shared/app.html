@@ -1,0 +1,30 @@
+<ion-side-menus>
+    <ion-side-menu-content>
+
+        <ion-nav-bar class="bar-dark">
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <ion-nav-view name="appContent"></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+
+        <ion-header-bar class="bar-assertive">
+            <h1 class="title">Menu</h1>
+        </ion-header-bar>
+
+        <ion-content>
+            <ul class="list">
+                <li ui-sref-active="active"><a ui-sref="app.home">HOME</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.posts">BLOG</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.portfolio">PORTFOLIO</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.about">ABOUT</a></li>
+            </ul>
+        </ion-content>
+
+    </ion-side-menu>
+</ion-side-menus>

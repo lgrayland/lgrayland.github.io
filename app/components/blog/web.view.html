@@ -1,0 +1,31 @@
+<ion-content>
+    <div class="blue">
+        <div class="container">
+            <div class="row">
+                <h3>{{post.title}}</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mtb">
+        <div class="row">
+            <div class="col-lg-8">
+                <p><img class="img-responsive" ng-src="assets/img/blog/{{post.image}}"></p>
+                <a href="post.url"><h3 class="ctitle">{{ post.title }}</h3></a>
+                <p><csmall>{{ post.created_at | date:'MMM d, yyyy' }}.</csmall></p>
+
+                <div markdown-to-html="post.body"></div>
+
+                <div class="spacing"></div>
+
+                <!--comments-->
+
+            </div>
+
+            <div class="col-lg-4" ng-include="'app/shared/sidebar.html'" ng-controller="SidebarCtrl"></div>
+
+        </div>
+    </div>
+
+    <footer class="footerwrap" ng-include="'app/shared/footer.html'"></footer>
+</ion-content>

@@ -1,0 +1,8 @@
+<div class="a-card">
+    <img ng-src="../www/assets/img/project/{{card.img}}">
+    <div class="overlay">
+        <h3 class="title">{{ card.title }}</h3>
+        <a ng-click="mother.imageModal(card.img)" class="p-button"><i class="ion-ios-search-strong"></i></a>
+        <a ui-sref="web.project({id:card.id})" class="p-button"><i class="ion-link"></i></a>
+    </div>
+</div>

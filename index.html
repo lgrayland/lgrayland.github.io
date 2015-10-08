@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="public">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>LGrayland</title>
+
+    <!-- compiled css output -->
+    <link href="assets/css/ionic.app.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.css"/>
+
+    <!-- ionic/angularjs js -->
+    <script src="assets/lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="assets/lib/angular-cookie/angular-cookie.min.js"></script>
+    <script src="assets/lib/showdown/dist/showdown.js"></script>
+    <script src="assets/lib/ng-showdown/dist/ng-showdown.js"></script>
+    <script src="assets/lib/angular-deckgrid/angular-deckgrid.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.module.js"></script>
+
+    <script src="app/shared/sidebar.controller.js"></script>
+    <script src="app/shared/modal.controller.js"></script>
+
+    <script src="app/components/home/home.module.js"></script>
+    <script src="app/components/home/config.route.js"></script>
+    <script src="app/components/home/home.controller.js"></script>
+
+    <script src="app/components/blog/posts.module.js"></script>
+    <script src="app/components/blog/config.route.js"></script>
+    <script src="app/components/blog/posts.controller.js"></script>
+    <script src="app/components/blog/post.controller.js"></script>
+    <script src="app/components/blog/posts.factory.js"></script>
+
+    <script src="app/components/portfolio/portfolio.module.js"></script>
+    <script src="app/components/portfolio/config.route.js"></script>
+    <script src="app/components/portfolio/portfolio.controller.js"></script>
+    <script src="app/components/portfolio/project.controller.js"></script>
+    <script src="app/components/portfolio/portfolio.factory.js"></script>
+
+    <script src="app/components/about/about.module.js"></script>
+    <script src="app/components/about/config.route.js"></script>
+    <script src="app/components/about/about.controller.js"></script>
+
+    <script src="app/components/contact/contact.module.js"></script>
+    <script src="app/components/contact/config.route.js"></script>
+    <script src="app/components/contact/contact.controller.js"></script>
+
+</head>
+<body ng-controller="MainCtrl">
+
+<div ui-view></div>
+</body>
+</html>

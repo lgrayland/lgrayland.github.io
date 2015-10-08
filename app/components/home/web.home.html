@@ -1,0 +1,52 @@
+<ion-content>
+    <div class="header-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 title">
+                    <h3>A Website all about me and my work</h3>
+                    <h1>Luke Grayland</h1>
+                    <h5>Full Stack Web Developer</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 himg">
+                    <img src="assets/img/tech.jpg" class="img-responsive">
+                </div>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /headerwrap -->
+
+    <div class="service">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-4">
+                    <!-- <i class="fa fa-heart-o"></i>
+                    <h4>Development</h4> -->
+                    <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p><br/><a href="#" class="btn btn-theme">More Info</a></p> -->
+                </div>
+                <div class="col-md-4" ng-controller="PostsCtrl">
+                    <i class="ion-ios-chatbubble"></i>
+                    <h4>Latest Posts</h4>
+                    <div class="hline"></div>
+                    <p ng-repeat="post in posts | limitTo:5 |orderBy:'time':true">
+                        <a ui-sref="web.post({id:post.id})">{{ post.title }}.</a>
+                    </p>
+                    <p><br/><a ui-sref="web.posts" class="btn btn-theme">All Blogs</a></p>
+                </div>
+                <div class="col-md-4">
+                    <!-- <i class="fa fa-code"></i>
+                    <h4>Languages</h4> -->
+                    <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p><br/><a href="#" class="btn btn-theme">More Info</a></p> -->
+                </div>
+            </div>
+        </div><! --/container -->
+    </div><! --/service -->
+
+    <div class="portfolio"></div>
+
+    <footer class="footerwrap" ng-include="'app/shared/footer.html'"></footer>
+</ion-content>
+
+

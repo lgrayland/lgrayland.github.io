@@ -1,0 +1,32 @@
+<ion-content>
+    <div class="blue">
+        <div class="container">
+            <div class="row">
+                <h3>Blog</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
+
+    <div class="container mtb">
+        <div class="row">
+            <div class="col-lg-8">
+                <div ng-repeat="post in posts">
+                    <a ui-sref="web.post({id:post.id})">
+                        <img class="img-responsive" ng-src='assets/img/blog/{{post.image}}'>
+                    </a>
+                    <a ui-sref="web.post({id:post.id})"><h3 class="ctitle">{{ post.title }}</h3></a>
+                    <p><csmall>{{ post.created_at | date:'MMM d, yyyy' }}.</csmall></p>
+                    <p markdown-to-html="post.body | limitTo: 500"><span ng-if="post.body.length > 500">...</span></p>
+                    <p><a ui-sref="web.post({id:post.id})">[Read More]</a></p>
+                    <div class="hline"></div>
+                    <div class="spacing"></div>
+                </div>
+            </div><! --/col-lg-8 -->
+
+            <div class="col-lg-4" ng-include="'app/shared/sidebar.html'" ng-controller="SidebarCtrl"></div>
+
+        </div><! --/row -->
+    </div><! --/container -->
+
+    <footer class="footerwrap" ng-include="'app/shared/footer.html'"></footer>
+</ion-content>
